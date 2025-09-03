@@ -1,6 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
-import DBconnect from "./config/db";
+import DBconnect from "./config/db.js";
 
 dotenv.config();
 const port = process.env.PORT;
