@@ -1,5 +1,6 @@
 import express from "express"
 import dotenv from "dotenv"
+import DBconnect from "./config/db.js";
 
 dotenv.config();
 const port = process.env.PORT;
@@ -12,5 +13,6 @@ app.get("/",(req,res)=>{
 
 
 app.listen(port,()=>{
+    DBconnect();
     console.log(`server is started on ${port}`);
 })
